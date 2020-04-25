@@ -7,6 +7,8 @@ Provides the following REST API
    3. Requests with missing details will be responded with corresponding error message in the result object
    4. errorMsg in the result object will be null in successful processing and a corresponding error in case of failures
    
+   After deployment, the API will be available at http://hostIP:port/mathevaluator/webapi/evaluator/evaluate
+   
    
 2. Retrieve User audit details
    1. Consumes UserAuditRequest as XML type. It should have User Id
@@ -18,7 +20,7 @@ Provides the following REST API
    7. Most frequently used operator is determined at runtime in constant time as the map size would be atmost the number of 
       suppported operators at any given time
    
-   
+      After deployment, the API will be available at http://hostIP:port/mathevaluator/webapi/evaluator/useraudit
    
    
    ## Supported operators
