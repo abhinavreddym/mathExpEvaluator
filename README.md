@@ -13,6 +13,11 @@ Provides the following REST API
    2. Produces UserAuditResult as XML type with the details like evaluation service usage count, most used  operator (and its count) in       the mathematical expressions provided by the user
    3. Requests with missing details will be responded with corresponding error message in the result object
    4. errorMsg in the result object will be null in successful processing and a corresponding error in case of failures
+   5. Service request count is tracked by using an AtomicIntegerin UserAuditDetails, which is incremented for each API usage
+   6. Similarly in UserAuditDetails, a map Map<Character, AtomicInteger> is used to  track operator and its frequency for each user
+   7. Most frequently used operator is determined at runtime in constant time as the map size would be atmost the number of 
+      suppported operators at any given time
+   
    
    
    
